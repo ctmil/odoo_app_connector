@@ -1,0 +1,30 @@
+header {
+	background-color: #7C7BAD;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 768px) {
+  .o_menu_sections {
+  	width:100%;
+  }
+  .o_menu_systray {
+	float:left !important;
+  }
+  #o_button_toggle {
+        display:block;
+	float:right;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .o_menu_sections {
+        width:auto;
+  }
+  #o_button_toggle {
+	display:none;
+  }
+  .o_menu_systray {
+        display:block;
+  }
+}

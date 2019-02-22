@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_app_connector_odoo_app_connector,odoo_app_connector.odoo_app_connector,model_odoo_app_connector_odoo_app_connector,,1,0,0,0
