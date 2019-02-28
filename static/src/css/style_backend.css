@@ -2,9 +2,20 @@ header {
 	background-color: #7C7BAD;
 }
 
+.o_form_view .o_form_sheet_bg > .o_form_sheet {
+	min-width:auto !important;
+}
+
+.o_form_view .oe_chatter {
+	min-width:auto !important;
+}
+
 /*Responsive*/
 
 @media only screen and (max-width: 768px) {
+  html .o_web_client > .o_main .o_main_content {
+	width:100%;
+  }
   .o_menu_sections {
   	width:100%;
   }
@@ -15,9 +26,22 @@ header {
         display:block;
 	float:right;
   }
+  .o_form_view .oe_button_box .oe_stat_button {
+	width: 39px !important;
+	overflow: hidden;
+  }
+  .o_menu_systray {
+        width:100%;
+  }
+  .o_mail_systray_item.o_no_notification.show {
+	width:100%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  html .o_web_client > .o_main .o_main_content {
+        width:auto;
+  }
   .o_menu_sections {
         width:auto;
   }
@@ -26,5 +50,9 @@ header {
   }
   .o_menu_systray {
         display:block;
+	width:auto;
+  }
+  .o_form_view .oe_button_box .oe_stat_button {
+        width: 132px !important;
   }
 }
