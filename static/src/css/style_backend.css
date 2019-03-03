@@ -27,9 +27,11 @@ header {
 	width:100%;
   }
   .o_menu_sections {
+	display:none;
   	width:100%;
   }
   .o_menu_systray {
+	display: none;
 	float:left !important;
   }
   #o_button_toggle {
@@ -51,9 +53,7 @@ header {
         display:none !important;
   }
   .o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_value {
-        position:absolute !important;
-	right:0 !important;
-	bottom:-2px !important;
+        display:none !important;
   }
   .o_form_view .oe_button_box.o_full .o_dropdown_more {
 	width:42px !important;
@@ -62,10 +62,16 @@ header {
 	padding:2px 2px 36px !important;
 	overflow:hidden;
   }
+  .o_form_view .oe_avatar {
+      	margin-right: 10px;
+  }
   .o_form_view .oe_avatar + .oe_title {
         padding:0 !important;
 	margin:0 !important;
 	width:auto !important;
+  }
+  .o_form_view .oe_button_box {
+    	width: 100% !important;
   }
   .o_form_view .o_group .o_group_col_6 {
     	width: 100% !important;
@@ -81,6 +87,7 @@ header {
         width:auto;
   }
   .o_menu_sections {
+	display:block;
         width:auto;
   }
   #o_button_toggle {
@@ -93,7 +100,13 @@ header {
   .o_form_view .oe_button_box .oe_stat_button {
         width: 132px !important;
   }
-  .o_stat_text{ 
+  .o_stat_text { 
+        display:block !important;
+  }
+  .o_form_view .oe_button_box {
+        width: 400px !important;
+  }
+  .o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_value {
         display:block !important;
   }
   .o_form_view .oe_button_box.o_full .o_dropdown_more { 
