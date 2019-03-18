@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import babel.messages.pofile
 import base64
+import csv
 import datetime
 import functools
 import glob
 import hashlib
 import imghdr
-import io
 import itertools
 import jinja2
 import json
@@ -15,35 +15,25 @@ import operator
 import os
 import re
 import sys
-import tempfile
 import time
-import zlib
-
-import werkzeug
-import werkzeug.exceptions
 import werkzeug.utils
 import werkzeug.wrappers
-import werkzeug.wsgi
-from collections import OrderedDict
-from werkzeug.urls import url_decode, iri_to_uri
+import zlib
 from xml.etree import ElementTree
-import unicodedata
+from cStringIO import StringIO
 
 import odoo
 import odoo.modules.registry
 from odoo.api import call_kw, Environment
 from odoo.modules import get_resource_path
-from odoo.tools import crop_image, topological_sort, html_escape, pycompat
-from odoo.tools.mimetypes import guess_mimetype
+from odoo.tools import topological_sort
 from odoo.tools.translate import _
-from odoo.tools.misc import str2bool, xlwt, file_open
-from odoo.tools.safe_eval import safe_eval
+from odoo.tools.misc import str2bool, xlwt
 from odoo import http
 from odoo.http import content_disposition, dispatch_rpc, request, \
-    serialize_exception as _serialize_exception, Response
-from odoo.exceptions import AccessError, UserError, AccessDenied
+                      serialize_exception as _serialize_exception
+from odoo.exceptions import AccessError, UserError
 from odoo.models import check_method_name
-from odoo.service import db, security
 
 def ensure_db(redirect='/web/database/selector'):
 	db = request.params.get('db') and request.params.get('db').strip()
