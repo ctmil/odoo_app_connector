@@ -20,7 +20,6 @@ import time
 import zlib
 
 import werkzeug
-import werkzeug.exceptions
 import werkzeug.utils
 import werkzeug.wrappers
 import werkzeug.wsgi
@@ -34,16 +33,15 @@ import odoo.modules.registry
 from odoo.api import call_kw, Environment
 from odoo.modules import get_resource_path
 from odoo.tools import crop_image, topological_sort, html_escape, pycompat
-from odoo.tools.mimetypes import guess_mimetype
 from odoo.tools.translate import _
 from odoo.tools.misc import str2bool, xlwt, file_open
 from odoo.tools.safe_eval import safe_eval
 from odoo import http
 from odoo.http import content_disposition, dispatch_rpc, request, \
     serialize_exception as _serialize_exception, Response
-from odoo.exceptions import AccessError, UserError, AccessDenied
+from odoo.exceptions import AccessError, UserError
 from odoo.models import check_method_name
-from odoo.service import db, security
+from odoo.service import db
 
 def ensure_db(redirect='/web/database/selector'):
 	db = request.params.get('db') and request.params.get('db').strip()
@@ -124,6 +122,7 @@ class OdooAppConnector(http.Controller):
 		response = request.render('web.login', values)
 		#response.headers['X-Frame-Options'] = 'DENY'
 		return response
+
 
 	def _login_redirect(self, uid, redirect=None):
 		return redirect if redirect else '/web'
