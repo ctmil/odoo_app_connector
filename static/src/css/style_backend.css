@@ -80,7 +80,7 @@ header {
   .o_form_view .oe_avatar {
       	margin-right: 10px;
   }
-  .o_form_view .oe_avatar + .oe_title {
+  .o_form_view .oe_button_box + .oe_title, .o_form_view .oe_avatar + .oe_title {
         padding:0 !important;
 	margin:0 !important;
 	width:auto !important;
@@ -95,7 +95,6 @@ header {
     	color: inherit !important;
     	text-decoration: none;
   }
-
   #menu_more_container {
 	display:block !important;
   }
