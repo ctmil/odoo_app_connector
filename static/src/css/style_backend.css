@@ -19,6 +19,21 @@ header {
     	overflow: hidden;
     	text-overflow: ellipsis;
 }
+.oe_app_close_button { 
+        position:absolute;
+	top:0px;
+	right:-40px;
+	display:block;
+	background:#7C7BAD;
+	color:#fff;
+	width:40px;
+	height:40px;
+	font-size: 30px;
+    	padding: 0 0 0 5px;
+	border-bottom-right-radius: 10px;
+    	border-top-right-radius: 10px;
+   	opacity: 0.8;
+}
 
 /*Responsive*/
 
@@ -80,6 +95,23 @@ header {
     	color: inherit !important;
     	text-decoration: none;
   }
+
+  #menu_more_container {
+	display:block !important;
+  }
+  .o_sub_menu {
+	position: fixed;
+    	z-index: 99;
+    	background: #f0eeee;
+    	height: 100%;
+	left:-250px;
+  }
+  .oe_app_close_button {
+	display:block !important;
+  }
+  .test-ribbon {
+        display:none !important;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -117,5 +149,8 @@ header {
   }
   .o_form_view .o_group .o_group_col_6 {
         width: 50% !important;
+  }
+  .oe_app_close_button { 
+        display:none !important;
   }
 }
