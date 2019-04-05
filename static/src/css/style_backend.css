@@ -20,16 +20,19 @@ header {
     	text-overflow: ellipsis;
 }
 .oe_app_close_button { 
-        position:absolute;
-	top:0px;
-	right:-40px;
-	display:block;
-	background:#7C7BAD;
-	color:#fff;
-	width:40px;
-	height:40px;
-	font-size: 30px;
-    	padding: 0 0 0 5px;
+      position:absolute;
+      top:0px;
+      right:-40px;
+      display:block;
+      background:#7C7BAD;
+      color:#fff;
+      width:40px;
+      height:40px;
+      font-size: 30px;
+      padding: 0 0 0 5px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      opacity: 0.8;
 }
 
 /*Responsive*/
@@ -77,10 +80,10 @@ header {
   .o_form_view .oe_avatar {
       	margin-right: 10px;
   }
-  .o_form_view .oe_avatar + .oe_title {
+  .o_form_view .oe_button_box + .oe_title, .o_form_view .oe_avatar + .oe_title {
         padding:0 !important;
-	margin:0 !important;
-	width:auto !important;
+	      margin:0 !important;
+	      width:auto !important;
   }
   .o_form_view .oe_button_box {
     	width: 100% !important;
@@ -105,6 +108,9 @@ header {
   .oe_app_close_button {
 	display:block !important;
   }
+  .test-ribbon {
+    display:none !important;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -112,15 +118,15 @@ header {
         width:auto;
   }
   .o_menu_sections {
-	display:block;
+	      display:block;
         width:auto;
   }
   #o_button_toggle {
-	display:none;
+	      display:none;
   }
   .o_menu_systray {
         display:block;
-	width:auto;
+	      width:auto;
   }
   .o_form_view .oe_button_box .oe_stat_button {
         width: 132px !important;
