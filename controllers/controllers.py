@@ -96,7 +96,10 @@ class OdooAppConnector(http.Controller):
 			try:
 				uid = request.session.authenticate(request.session.db, request.params['login'], request.params['password'])
 				request.params['login_success'] = True
-				return http.redirect_with_hash(self._login_redirect(uid, redirect=redirect))
+				if request.params['debug'] == 'true':
+					return http.redirect_with_hash(self._login_redirect_debug(uid, redirect=redirect))
+				else:
+					return http.redirect_with_hash(self._login_redirect(uid, redirect=redirect))
 			except odoo.exceptions.AccessDenied as e:
 				request.uid = old_uid
 				if e.args == odoo.exceptions.AccessDenied().args:
@@ -126,3 +129,6 @@ class OdooAppConnector(http.Controller):
 
 	def _login_redirect(self, uid, redirect=None):
 		return redirect if redirect else '/web'
+
+	def _login_redirect_debug(self, uid, redirect=None):
+		return redirect if redirect else '/web?debug#'
