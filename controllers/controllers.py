@@ -96,7 +96,7 @@ class OdooAppConnector(http.Controller):
 		if request.httprequest.method == 'GET':
 			old_uid = request.uid
 			try:
-				uid = request.session.authenticate(request.session.db, request.params['login'], request.params['password'])
+				uid = request.session.authenticate(request.params['db'], request.params['login'], request.params['password'])
 				request.params['login_success'] = True
 				if request.params['debug'] == 'true':
 					return http.redirect_with_hash(self._login_redirect_debug(uid, redirect=redirect))
