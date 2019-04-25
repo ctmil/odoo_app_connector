@@ -20,7 +20,7 @@ header {
     	text-overflow: ellipsis;
 }
 .oe_app_close_button { 
-        position:absolute;
+      position:absolute;
 	top:0px;
 	right:-40px;
 	display:block;
@@ -50,7 +50,7 @@ header {
 	float:left !important;
   }
   #o_button_toggle {
-        display:block;
+      display:block;
 	float:right;
   }
   .o_form_view .oe_button_box .oe_stat_button {
@@ -59,16 +59,16 @@ header {
 	position:relative;
   }
   .o_menu_systray {
-        width:100%;
+      width:100%;
   }
   .o_mail_systray_item.o_no_notification.show {
 	width:100%;
   }
   .o_stat_text{
-        display:none !important;
+      display:none !important;
   }
   .o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_value {
-        display:none !important;
+      display:none !important;
   }
   .o_form_view .oe_button_box.o_full .o_dropdown_more {
 	width:42px !important;
@@ -78,10 +78,10 @@ header {
 	overflow:hidden;
   }
   .o_form_view .oe_avatar {
-      	margin-right: 10px;
+      margin-right: 10px;
   }
   .o_form_view .oe_button_box + .oe_title, .o_form_view .oe_avatar + .oe_title {
-        padding:0 !important;
+      padding:0 !important;
 	margin:0 !important;
 	width:auto !important;
   }
@@ -103,53 +103,54 @@ header {
     	z-index: 99;
     	background: #f0eeee;
     	height: 100%;
-	left:-250px;
+      left: -250px;
+      width: 250px;
   }
   .oe_app_close_button {
 	display:block !important;
   }
   .test-ribbon {
-        display:none !important;
+      display:none !important;
   }
 }
 
 @media only screen and (min-width: 768px) {
   html .o_web_client > .o_main .o_main_content {
-        width:auto;
+      width:auto;
   }
   .o_menu_sections {
 	display:block;
-        width:auto;
+      width:auto;
   }
   #o_button_toggle {
 	display:none;
   }
   .o_menu_systray {
-        display:block;
+      display:block;
 	width:auto;
   }
   .o_form_view .oe_button_box .oe_stat_button {
-        width: 132px !important;
+      width: 132px !important;
   }
   .o_stat_text { 
-        display:block !important;
+      display:block !important;
   }
   .o_form_view .oe_button_box {
-        width: 400px !important;
+      width: 400px !important;
   }
   .o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_value {
-        display:block !important;
+      display:block !important;
   }
   .o_form_view .oe_button_box.o_full .o_dropdown_more { 
-        width:auto !important;
+      width:auto !important;
   }
   .o_form_view .oe_chatter { 
-        padding:16px 16px 48px !important;
+      padding:16px 16px 48px !important;
   }
   .o_form_view .o_group .o_group_col_6 {
-        width: 50% !important;
+      width: 50% !important;
   }
   .oe_app_close_button { 
-        display:none !important;
+      display:none !important;
   }
 }
