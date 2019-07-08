@@ -45,6 +45,8 @@ from odoo.exceptions import AccessError, UserError, AccessDenied
 from odoo.models import check_method_name
 from odoo.service import db, security
 
+_logger = logging.getLogger(__name__)
+
 def ensure_db(redirect='/web/database/selector'):
 	db = request.params.get('db') and request.params.get('db').strip()
 
@@ -99,8 +101,10 @@ class OdooAppConnector(http.Controller):
 				uid = request.session.authenticate(request.params['db'], request.params['login'], request.params['password'])
 				request.params['login_success'] = True
 				if request.params['debug'] == 'true':
+					_logger.info('Connection from OdooApp [debug mode]')
 					return http.redirect_with_hash(self._login_redirect_debug(uid, redirect=redirect))
 				else:
+					_logger.info('Connection from OdooApp')
 					return http.redirect_with_hash(self._login_redirect(uid, redirect=redirect))
 			except odoo.exceptions.AccessDenied as e:
 				request.uid = old_uid
