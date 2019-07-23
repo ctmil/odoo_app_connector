@@ -82,6 +82,18 @@ header {
     	color: inherit !important;
     	text-decoration: none;
   }
+  .dropdown-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      max-height: 100% !important;
+      border-radius: 0;
+      font-size: 28px;
+  }
+  .o_form_view .oe_button_box + .oe_title, .o_form_view .oe_button_box + .oe_avatar + .oe_title {
+      width: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
