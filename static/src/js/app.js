@@ -1,4 +1,4 @@
 {
 	"status": "OK",
-	"version": 12
+	"version": 8
 }
