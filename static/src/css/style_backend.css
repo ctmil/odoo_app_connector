@@ -82,17 +82,28 @@ header {
     	color: inherit !important;
     	text-decoration: none;
   }
-  .dropdown-menu {
-      position: fixed;
+  .o_menu_apps .dropdown-menu {
+      position: fixed !important;
       top: 0;
       left: 0;
-      height: 100%;
+      height: 100% !important;
       max-height: 100% !important;
       border-radius: 0;
       font-size: 28px;
   }
   .o_form_view .oe_button_box + .oe_title, .o_form_view .oe_button_box + .oe_avatar + .oe_title {
       width: auto;
+  }
+  .o_statusbar_status {
+      overflow:hidden;
+  }
+  .btn {
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  .tooltip {
+      max-width: 90%;
   }
 }
 
