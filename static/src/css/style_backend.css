@@ -132,9 +132,6 @@ header {
   .o_stat_text { 
         display:block !important;
   }
-  .o_form_view .oe_button_box {
-        width: 400px !important;
-  }
   .o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_value {
         display:block !important;
   }
