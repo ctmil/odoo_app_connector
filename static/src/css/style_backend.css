@@ -40,8 +40,12 @@ header {
         display:block;
 	float:right;
   }
+  .o_form_view .oe_button_box {
+	margin-left:0;
+	margin-right:0;
+  }
   .o_form_view .oe_button_box .oe_stat_button {
-	width: 39px !important;
+	width: 44px !important;
 	overflow: hidden;
 	position:relative;
   }
